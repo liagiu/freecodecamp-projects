@@ -1116,6 +1116,7 @@ header {
           #books-and-movie .item .description > span {
             font-size: 0.6875rem; } }
       #books-and-movie .item .description button {
+        cursor: pointer;
         background-color: #fff;
         border: 1px solid #949a74;
         border-radius: 3px;
