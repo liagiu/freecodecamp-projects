@@ -1,0 +1,167 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.15rem;
+}
+
+html {
+  font-size: 10px;
+}
+
+.header {
+  &__heading {
+    text-transform: uppercase;
+		text-align: center;
+    color: $primary-color;
+    font-size: 2.5rem;
+    font-weight: 900;
+    
+    @include respond-to('medium') {
+      font-size: 4rem;
+    }
+  }
+}
+
+.form {
+  &__description {
+    color: $primary-color-light;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include respond-to('medium') {
+      font-size: 1.95rem;
+    }
+  }
+
+  &__label {
+    font-size: 1.8rem;
+
+    @include respond-to('small-landscape') {
+      font-size: 1.3rem;
+    }
+
+    @include respond-to('medium') {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__input {
+    color: $primary-color;
+    font-size: 1.9rem;
+    text-align: center;
+
+    @include respond-to('medium') {
+      font-size: 2.5rem;
+    }
+
+    &::placeholder {
+      color: rgba($tertiary-color, .5);
+      font-size: 1.8rem;
+
+      @include respond-to('medium') {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__legend {
+    color: $secondary-color;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include respond-to('medium') {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__dropdown {
+    color: $tertiary-color;
+    font-size: 1.6rem;
+
+    @include respond-to('medium') {
+      font-size: 2rem;
+    }
+  }
+
+  &__dropdown-options {
+    font-size: 1.5rem;
+  }
+
+  &__radio-label {
+    font-size: 1.2rem;
+
+    @include respond-to('medium') {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__checkbox-label {
+    font-size: 1.1rem;
+
+    @include respond-to('small-landscape') {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__textarea {
+    color: rgba(0, 0, 0, .7);
+  }
+
+  &__submit-btn {
+    font-size: 1.5rem;
+    color: #fff;
+
+    @include respond-to('small-landscape') {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__heading {
+    font-size: 4rem;
+    color: $tertiary-color;
+    
+    &--success {
+      font-size: 3rem;
+    }
+  }
+
+  &__p {
+    font-size: 2rem;
+    color: $primary-color;
+  }
+
+  &__checkmark {
+    font-size: 5rem;
+    color: $primary-color;
+  }
+
+  &__arrow-btn {
+    color: $primary-color;
+    font-size: 4.5rem;
+
+    @include respond-to('default-landscape') {
+      font-size: 4.5rem;
+    }
+
+    &:first-of-type {
+      color: rgba(62, 78, 86, 0.6);
+    }
+  }
+
+  &__asterisk {
+    font-size: 1.5rem;
+  }
+
+  &__alert {
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(221, 27, 27);
+    text-transform: uppercase;
+
+    @include respond-to('small-landscape') {
+      font-size: 1.3rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "survey-form",
+  "version": "1.0.0",
+  "description": "Project #2 for Free Code Camp - Survey Form - Responsive Web Design Projects",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Giulia",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.5",
+    "browser-sync": "2.26.3",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-babel": "8.0.0",
+    "gulp-sass": "4.0.2",
+    "gulp-sourcemaps": "2.6.4",
+    "gulp-uglify": "3.0.1",
+    "node-sass": "4.9.4"
+  }
+}

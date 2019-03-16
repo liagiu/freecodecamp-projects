@@ -1,0 +1,28 @@
+.header {
+  &__heading {
+		display: inline-block;
+		margin-top: 3rem;
+		position: relative;
+		overflow: scroll;
+		width: 100vw;
+		
+		@include respond-to('small-landscape') {
+			margin-top: 2%;
+		}
+	}
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 57rem;
+
+  @include respond-to('small') {
+    height: 65rem;
+  }
+
+  @include respond-to('default-landscape') {
+    height: 56rem;
+  }
+}

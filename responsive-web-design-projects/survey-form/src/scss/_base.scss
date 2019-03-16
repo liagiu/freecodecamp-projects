@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+header {
+  overflow: scroll;
+}
+
+main {
+  overflow: scroll;
+}
+
+hr {
+  border: none;
+}
+
+input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+fieldset {
+  border: none;
+}

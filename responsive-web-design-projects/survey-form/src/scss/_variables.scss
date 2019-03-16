@@ -1,0 +1,16 @@
+$primary-color: #3e4e56;
+$primary-color-light: #607682;
+$secondary-color: #756755;
+$secondary-color-light: #cebdaa;
+$tertiary-color: #737373;
+$tertiary-color-light: #afafaf;
+
+$breakpoints: (
+  'default-landscape': '(orientation: landscape)',
+  'small' : 'screen and (min-width: 339px)',
+  'small-landscape' : 'screen and (min-width: 569px) and (orientation: landscape)',
+  'medium' : 'screen and (min-width: 599px)',
+  'medium-landscape' : 'screen and (min-width: 1024px) and (orientation: landscape)',
+  'large' : 'screen and (min-width: 1200px)',
+  'extra-large' : 'screen and (min-width: 1600px)'
+);
