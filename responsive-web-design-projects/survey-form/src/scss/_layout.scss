@@ -1,28 +1,81 @@
+.wrapper {
+  background-image: linear-gradient(
+    150deg,
+    transparent 80%,
+    $primary-color 80%
+  );
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+
+  @include respond-to('medium') {
+    background-image: linear-gradient(
+      140deg,
+      $primary-color-light 15%,
+      transparent 15%,
+      transparent 80%,
+      $primary-color 80%
+    );
+    justify-content: center;
+  }
+
+  @include respond-to('large') {
+    display: grid;
+    grid-template: auto / 15vw 70vw 15vw;
+    align-items: center;
+    background-image: linear-gradient(
+      155deg,
+      transparent 50%,
+      $primary-color 50%
+    );
+    justify-content: unset;
+  }
+}
+
 .header {
+  padding: 1rem;
+
+  @include respond-to('large') {
+    transform: rotate(-90deg);
+    justify-self: start;
+  }
+
   &__heading {
-		display: inline-block;
-		margin-top: 3rem;
-		position: relative;
-		overflow: scroll;
-		width: 100vw;
-		
-		@include respond-to('small-landscape') {
-			margin-top: 2%;
-		}
-	}
+    display: inline-block;
+    margin-top: 3rem;
+    position: relative;
+    width: 100vw;
+
+    @include respond-to('small-landscape') {
+      margin-top: 2%;
+    }
+
+    @include respond-to('large') {
+      line-height: 1;
+      width: unset;
+    }
+  }
+
+  &__span {
+    @include respond-to('large') {
+      margin-left: 55%;
+    }
+  }
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 57rem;
+  height: 100%;
 
   @include respond-to('small') {
-    height: 65rem;
+    height: 60%;
   }
 
-  @include respond-to('default-landscape') {
-    height: 56rem;
+  @include respond-to('large') {
+    grid-column-start: 2;
   }
 }

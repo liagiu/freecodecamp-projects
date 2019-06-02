@@ -1,149 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:700,900" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
-	<link rel="stylesheet" href="dist/main.css">
-  <title>Survey Form</title>
-</head>
-<body>
-  <header class="header">
-		<h1 class="header__heading" id="title">Survey <span class="header__span">Form</span></h1>
-		<hr class="header__hr">
-	</header>
-  <main>
-		<form action="#" class="form" id="survey-form">
-			<p class="form__description" id="description">Let us know how we can improve Freecodecamp</p>
-			<hr class="form__hr">
-			<span class="form__alert">Please, fill out all the required fields</span>
-			<div class="form__tab form__tab--1">
-				<label for="name" id="name-label" class="form__label">Name <span class="form__asterisk">*</span></label>
-				<input type="text" id="name" name="name" class="form__input" placeholder="Enter your name" required>
-				<label for="email" id="email-label" class="form__label">Email <span class="form__asterisk">*</span></label>
-				<input type="email" id="email" name="email" class="form__input" placeholder="Enter your email" required>
-				<label for="age" id="number-label" class="form__label">Age <span class="form__asterisk">*</span></label>
-				<input type="number" id="number"name="age" min="1" max="99" class="form__input" placeholder="Enter your age" required>
-				<p class="form__legend">Which option best describes your current role? <span class="form__asterisk">*</span></p>
-				<div class="form__fieldset">
-					<select name="roles" id="dropdown" class="form__dropdown" required>
-						<optgroup class="form__dropdown-options">
-							<option value="" selected disabled>Please, select an option</option>
-							<option value="student">Student</option>
-							<option value="full time job">Full Time Job</option>
-							<option value="full time learner">Full Time Learner</option>
-							<option value="prefer not to say">Prefer not to say</option>
-							<option value="other">Other</option>
-						</optgroup>
-					</select>
-					<span class="form__dropdown-triangle"></span>
-				</div>
-			</div>
-			<div class="form__tab form__tab--2">
-				<p class="form__legend">How likely is that you would recommend freecodecamp to a friend? <span class="form__asterisk">*</span></p>
-				<div class="form__fieldset">
-					<div class="form__radio-fieldset">
-						<input type="radio" class="form__radio" name="recommendation" id="not-sure" value="not sure">
-						<label for="not-sure" class="form__radio-button" aria-hidden="true"></label>
-						<label for="not-sure" class="form__radio-label">Not Sure</label>
-					</div>
-					<div class="form__radio-fieldset">
-						<input type="radio" class="form__radio" name="recommendation" id="maybe" value="maybe">
-						<label for="maybe" class="form__radio-button" aria-hidden="true"></label>
-						<label for="maybe" class="form__radio-label">Maybe</label>
-					</div>
-					<div class="form__radio-fieldset">
-						<input type="radio" class="form__radio" name="recommendation" id="definitely" value="definitely">
-						<label for="definitely" class="form__radio-button" aria-hidden="true"></label>
-						<label for="definitely" class="form__radio-label">Definitely</label>
-					</div>
-				</div>
-				<p class="form__legend">What do you like most in FCC: <span class="form__asterisk">*</span></p>
-				<div class="form__fieldset">
-					<select name="roles" class="form__dropdown">
-						<option value="" selected disabled>Please, select an option</option>
-						<option value="challenges">Challenges</option>
-						<option value="projects">Projects</option>
-						<option value="community">Community</option>
-						<option value="open source">Open Source</option>
-					</select>
-					<span class="form__dropdown-triangle"></span>
-				</div>
-				<p class="form__legend">Things that should be improved in the future (Check all that apply): <span class="form__asterisk">*</span></p>
-				<div class="form__fieldset">	
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="front-end" id="front-end" value="front-end projects">
-						<label for="front-end" class="form__checkbox-label">Front-end Projects</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="back-end" id="back-end" value="back-end projects">
-						<label for="back-end" class="form__checkbox-label">Back-end Projects</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="data-visualization" id="data-visualization" value="data visualization">
-						<label for="data-visualization" class="form__checkbox-label">Data Visualization</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="challenges" id="challenges" value="challenges">
-						<label for="challenges" class="form__checkbox-label">Challenges</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-							<input type="checkbox" class="form__checkbox" name="open-source-community" id="open-source-community" value="open source community">
-							<label for="open-source-community" class="form__checkbox-label">Open Source Community</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="gitter-help-rooms" id="gitter-help-rooms" value="gitter help rooms">
-						<label for="gitter-help-rooms" class="form__checkbox-label">Gitter help rooms</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="videos" id="videos" value="videos">
-						<label for="videos" class="form__checkbox-label">Videos</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="city-meetups" id="city-meetups" value="city meetups">
-						<label for="city-meetups" class="form__checkbox-label">City Meetups</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="wiki" id="wiki" value="wiki">
-						<label for="wiki" class="form__checkbox-label">Wiki</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="forum" id="forum" value="forum">
-						<label for="forum" class="form__checkbox-label">Forum</label>
-					</div>
-					<div class="form__checkbox-fieldset">
-						<input type="checkbox" class="form__checkbox" name="additional-courses" id="additional-courses" value="additional courses">
-						<label for="additional-courses" class="form__checkbox-label">Additional Courses</label>
-					</div>
-				</div>
-			</div>
-			<div class="form__tab form__tab--3">
-				<p class="form__legend">Any Comments or Suggestions?</p>
-				<textarea cols="32" rows="7" class="form__textarea" name="user-opinion" placeholder="Enter Your Comment Here"></textarea>
-				<button id="submit" class="form__submit-btn" value="Submit">Submit</button>
-			</div>
-			<div class="form__btns">				
-				<div class="form__arrow-btns">
-					<button class="form__arrow-btn fas fa-angle-left" value="0" type="button" name="arrowbtn"></button>
-					<button class="form__arrow-btn fas fa-angle-right" value="1" type="button" name="arrowbtn"></button>
-				</div>
-				<div class="form__dot-btns">
-					<span class="form__dot-btn" value="0" type="button" name="dotbtn"></span>
-					<span class="form__dot-btn" value="1" type="button" name="dotbtn"></span>
-					<span class="form__dot-btn" value="2" type="button" name="dotbtn"></span>
-				</div>
-			</div>
-			<div class="form__tab form__tab--submitted">
-				<span class="form__checkmark fas fa-check"></span>
-				<h2 class="form__heading form__heading--success">Thank You!</h2>
-				<p class="form__p">The form was submitted successfully.</p>
-			</div>
-		</form>
-	</main>
-	<script src="src/main.js" type="text/javascript"></script>
-	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:700,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/solid.css"
+      integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/fontawesome.css"
+      integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dist/main.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__heading" id="title">
+          Survey <span class="header__span">Form</span>
+        </h1>
+        <hr class="header__hr" />
+      </header>
+      <main>
+        <form action="#" class="form" id="survey-form">
+          <p class="form__description" id="description">
+            Let us know how we can improve Freecodecamp
+          </p>
+          <hr class="form__hr" />
+          <span class="form__alert"
+            >Please, fill out all the required fields</span
+          >
+          <div class="form__tab form__tab--1">
+            <label for="name" id="name-label" class="form__label"
+              >Name <span class="form__asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form__input"
+              placeholder="Enter your name"
+              required
+            />
+            <label for="email" id="email-label" class="form__label"
+              >Email <span class="form__asterisk">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              placeholder="Enter your email"
+              required
+            />
+            <label for="age" id="number-label" class="form__label"
+              >Age <span class="form__asterisk">*</span></label
+            >
+            <input
+              type="number"
+              id="number"
+              name="age"
+              min="1"
+              max="99"
+              class="form__input"
+              placeholder="Enter your age"
+              required
+            />
+            <p class="form__legend">
+              Which option best describes your current role?
+              <span class="form__asterisk">*</span>
+            </p>
+            <div class="form__fieldset">
+              <select
+                name="roles"
+                id="dropdown"
+                class="form__dropdown"
+                required
+              >
+                <optgroup class="form__dropdown-options">
+                  <option value="" selected disabled
+                    >Please, select an option</option
+                  >
+                  <option value="student">Student</option>
+                  <option value="full time job">Full Time Job</option>
+                  <option value="full time learner">Full Time Learner</option>
+                  <option value="prefer not to say">Prefer not to say</option>
+                  <option value="other">Other</option>
+                </optgroup>
+              </select>
+              <span class="form__dropdown-triangle"></span>
+            </div>
+          </div>
+          <div class="form__tab form__tab--2">
+            <p class="form__legend">
+              How likely is that you would recommend freecodecamp to a friend?
+              <span class="form__asterisk">*</span>
+            </p>
+            <div class="form__fieldset">
+              <div class="form__radio-fieldset">
+                <input
+                  type="radio"
+                  class="form__radio"
+                  name="recommendation"
+                  id="not-sure"
+                  value="not sure"
+                />
+                <label
+                  for="not-sure"
+                  class="form__radio-button"
+                  aria-hidden="true"
+                ></label>
+                <label for="not-sure" class="form__radio-label">Not Sure</label>
+              </div>
+              <div class="form__radio-fieldset">
+                <input
+                  type="radio"
+                  class="form__radio"
+                  name="recommendation"
+                  id="maybe"
+                  value="maybe"
+                />
+                <label
+                  for="maybe"
+                  class="form__radio-button"
+                  aria-hidden="true"
+                ></label>
+                <label for="maybe" class="form__radio-label">Maybe</label>
+              </div>
+              <div class="form__radio-fieldset">
+                <input
+                  type="radio"
+                  class="form__radio"
+                  name="recommendation"
+                  id="definitely"
+                  value="definitely"
+                />
+                <label
+                  for="definitely"
+                  class="form__radio-button"
+                  aria-hidden="true"
+                ></label>
+                <label for="definitely" class="form__radio-label"
+                  >Definitely</label
+                >
+              </div>
+            </div>
+            <p class="form__legend">
+              What do you like most in FCC:
+              <span class="form__asterisk">*</span>
+            </p>
+            <div class="form__fieldset">
+              <select name="roles" class="form__dropdown">
+                <option value="" selected disabled
+                  >Please, select an option</option
+                >
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projects</option>
+                <option value="community">Community</option>
+                <option value="open source">Open Source</option>
+              </select>
+              <span class="form__dropdown-triangle"></span>
+            </div>
+            <p class="form__legend">
+              Things that should be improved in the future (Check all that
+              apply): <span class="form__asterisk">*</span>
+            </p>
+            <div class="form__fieldset">
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="front-end"
+                  id="front-end"
+                  value="front-end projects"
+                />
+                <label for="front-end" class="form__checkbox-label"
+                  >Front-end Projects</label
+                >
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="back-end"
+                  id="back-end"
+                  value="back-end projects"
+                />
+                <label for="back-end" class="form__checkbox-label"
+                  >Back-end Projects</label
+                >
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="data-visualization"
+                  id="data-visualization"
+                  value="data visualization"
+                />
+                <label for="data-visualization" class="form__checkbox-label"
+                  >Data Visualization</label
+                >
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="challenges"
+                  id="challenges"
+                  value="challenges"
+                />
+                <label for="challenges" class="form__checkbox-label"
+                  >Challenges</label
+                >
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="open-source-community"
+                  id="open-source-community"
+                  value="open source community"
+                />
+                <label for="open-source-community" class="form__checkbox-label"
+                  >Open Source Community</label
+                >
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="gitter-help-rooms"
+                  id="gitter-help-rooms"
+                  value="gitter help rooms"
+                />
+                <label for="gitter-help-rooms" class="form__checkbox-label"
+                  >Gitter help rooms</label
+                >
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="videos"
+                  id="videos"
+                  value="videos"
+                />
+                <label for="videos" class="form__checkbox-label">Videos</label>
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="city-meetups"
+                  id="city-meetups"
+                  value="city meetups"
+                />
+                <label for="city-meetups" class="form__checkbox-label"
+                  >City Meetups</label
+                >
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="wiki"
+                  id="wiki"
+                  value="wiki"
+                />
+                <label for="wiki" class="form__checkbox-label">Wiki</label>
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="forum"
+                  id="forum"
+                  value="forum"
+                />
+                <label for="forum" class="form__checkbox-label">Forum</label>
+              </div>
+              <div class="form__checkbox-fieldset">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  name="additional-courses"
+                  id="additional-courses"
+                  value="additional courses"
+                />
+                <label for="additional-courses" class="form__checkbox-label"
+                  >Additional Courses</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form__tab form__tab--3">
+            <p class="form__legend">Any Comments or Suggestions?</p>
+            <textarea
+              cols="32"
+              rows="7"
+              class="form__textarea"
+              name="user-opinion"
+              placeholder="Enter Your Comment Here"
+            ></textarea>
+            <button id="submit" class="form__submit-btn" value="Submit">
+              Submit
+            </button>
+          </div>
+          <div class="form__btns">
+            <div class="form__arrow-btns">
+              <button
+                class="form__arrow-btn fas fa-angle-left"
+                href="#survey-form"
+                value="0"
+                type="button"
+                name="arrowbtn"
+              ></button>
+              <button
+                class="form__arrow-btn fas fa-angle-right"
+                href="#survey-form"
+                value="1"
+                type="button"
+                name="arrowbtn"
+              ></button>
+            </div>
+            <div class="form__dot-btns">
+              <span
+                class="form__dot-btn"
+                value="0"
+                type="button"
+                name="dotbtn"
+              ></span>
+              <span
+                class="form__dot-btn"
+                value="1"
+                type="button"
+                name="dotbtn"
+              ></span>
+              <span
+                class="form__dot-btn"
+                value="2"
+                type="button"
+                name="dotbtn"
+              ></span>
+            </div>
+          </div>
+          <div class="form__tab form__tab--submitted">
+            <span class="form__checkmark fas fa-check"></span>
+            <h2 class="form__heading form__heading--success">Thank You!</h2>
+            <p class="form__p">The form was submitted successfully.</p>
+          </div>
+        </form>
+      </main>
+    </div>
+    <script src="src/main.js" type="text/javascript"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>

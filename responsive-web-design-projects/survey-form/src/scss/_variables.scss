@@ -9,8 +9,8 @@ $breakpoints: (
   'default-landscape': '(orientation: landscape)',
   'small' : 'screen and (min-width: 339px)',
   'small-landscape' : 'screen and (min-width: 569px) and (orientation: landscape)',
-  'medium' : 'screen and (min-width: 599px)',
-  'medium-landscape' : 'screen and (min-width: 1024px) and (orientation: landscape)',
-  'large' : 'screen and (min-width: 1200px)',
-  'extra-large' : 'screen and (min-width: 1600px)'
+  'medium' : 'screen and (min-width: 600px)',
+  'medium-landscape' : 'screen and (min-width: 961px) and (orientation: landscape)',
+  'large' : 'screen and (min-width: 1024px)',
+  'extra-large' : 'screen and (min-width: 1800px)'
 );

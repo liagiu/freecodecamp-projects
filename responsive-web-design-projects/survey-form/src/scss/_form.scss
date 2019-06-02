@@ -1,6 +1,6 @@
 .form {
   justify-self: center;
-  height: 68%;
+  height: 100%;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -9,18 +9,41 @@
   min-width: 205px;
 
   @include respond-to('small') {
-    height: 85%;
     width: 92%;
+  }
+
+  @include respond-to('large') {
+    width: 100%;
   }
 
   &__description {
     margin-bottom: 1rem;
+
+    @include respond-to('large') {
+      color: rgba($secondary-color-light, 0.85);
+      line-height: 1.5;
+      position: absolute;
+      right: -1rem;
+      top: 15rem;
+      width: 20%;
+    }
   }
 
   &__hr {
     background-color: $secondary-color;
-    height: .1rem;
+    height: 0.1rem;
     width: 40%;
+
+    @include respond-to('large') {
+      background-color: $tertiary-color-light;
+      position: absolute;
+      top: 24rem;
+      right: 6%;
+      width: 5rem;
+    }
+    @include respond-to('extra-large') {
+      top: 22rem;
+    }
   }
 
   &__tab {
@@ -29,6 +52,7 @@
     align-items: center;
     text-align: center;
     background-color: #fff;
+    box-shadow: 5px 7px 5px 0px rgba(0, 0, 0, 0.2);
     width: 100%;
     padding: 2rem;
     position: absolute;
@@ -43,9 +67,27 @@
       top: 7rem;
     }
 
+    @include respond-to('medium-landscape') {
+      width: 85%;
+    }
+
+    @include respond-to('large') {
+      top: 2.5rem;
+      width: 60%;
+    }
+
     &--1 {
       opacity: 1;
       z-index: 1;
+    }
+
+    &--submitted {
+      @include respond-to('large') {
+        display: flex;
+        justify-content: center;
+        top: 10rem;
+        height: 25rem;
+      }
     }
   }
 
@@ -53,6 +95,10 @@
     margin-bottom: 2.5rem;
     border-bottom: 1px solid $secondary-color-light;
     width: 90%;
+
+    @include respond-to('medium-landscape') {
+      width: 65%;
+    }
 
     &:valid {
       border-bottom: 1px solid $primary-color-light;
@@ -65,11 +111,15 @@
 
   &__label {
     @include label;
+
+    @include respond-to('large') {
+      margin-bottom: 0;
+    }
   }
 
   &__dropdown {
     border: 1px solid $tertiary-color;
-    padding: .5rem;
+    padding: 0.5rem;
     position: relative;
     max-width: 100%;
 
@@ -80,6 +130,14 @@
     @include respond-to('medium') {
       width: 55%;
     }
+
+    @include respond-to('medium-landscape') {
+      width: 35%;
+    }
+
+    @include respond-to('large') {
+      width: 45%;
+    }
   }
 
   &__dropdown-triangle {
@@ -89,7 +147,7 @@
     top: 49%;
     right: 16%;
     border-width: 5px 5px 0 5px;
-    border-style: solid; 
+    border-style: solid;
     border-color: $secondary-color transparent transparent transparent;
     display: none;
 
@@ -99,6 +157,14 @@
 
     @include respond-to('medium') {
       right: 25%;
+    }
+
+    @include respond-to('medium-landscape') {
+      right: 34%;
+    }
+
+    @include respond-to('large') {
+      right: 30%;
     }
   }
 
@@ -138,11 +204,16 @@
     height: 1.8rem;
     width: 1.8rem;
     position: absolute;
+
+    @include respond-to('large') {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 
   &__radio:checked + &__radio-button {
     background: radial-gradient($primary-color-light 20%, #fff 30%, #fff 100%);
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
 
   &__checkbox-fieldset {
@@ -155,6 +226,10 @@
       max-width: 15rem;
     }
 
+    @include respond-to('medium') {
+      max-width: 13rem;
+    }
+
     &:not(:last-of-type) {
       margin-right: 1rem;
     }
@@ -162,7 +237,7 @@
 
   &__checkbox-label {
     @include label;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   &__textarea {
@@ -172,7 +247,11 @@
     resize: none;
     padding: 1rem;
     overflow: auto;
-    
+
+    @include respond-to('medium-landscape') {
+      width: 65%;
+    }
+
     &:focus {
       outline: 1px solid $primary-color;
     }
@@ -180,22 +259,22 @@
 
   &__submit-btn {
     background: linear-gradient(90deg, $primary-color-light, $primary-color);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5%;
     height: 3rem;
     width: 12rem;
     margin-top: 2rem;
 
     &:active {
-      transform: translateY(.4rem);
+      transform: translateY(0.4rem);
       outline: none;
-    } 
+    }
   }
 
   &__heading {
     margin-top: 3rem;
     position: relative;
-    
+
     &--success {
       transform: translateY(-50%);
     }
@@ -206,13 +285,17 @@
   }
 
   &__btns {
+    background-color: #fff;
+    border-radius: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 47rem;
+    padding: 0.75rem 0;
     margin-bottom: 1rem;
+    width: 30%;
     z-index: 3;
 
     @include respond-to('small') {
@@ -224,7 +307,12 @@
     }
 
     @include respond-to('medium') {
-      top: 46rem;
+      top: 50.5rem;
+    }
+
+    @include respond-to('large') {
+      top: 37rem;
+      width: 15%;
     }
   }
 
@@ -235,11 +323,15 @@
       @include respond-to('default-landscape') {
         margin-left: 3rem;
       }
+
+      @include respond-to('large') {
+        margin-left: 1.5rem;
+      }
     }
   }
 
   &__dot-btns {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   &__dot-btn {
@@ -255,11 +347,25 @@
       width: 2rem;
     }
 
+    @include respond-to('medium') {
+      height: 2.35rem;
+      width: 2.35rem;
+    }
+
+    @include respond-to('large') {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
     &:first-of-type {
       background: $primary-color;
     }
     &:not(:last-of-type) {
       margin-right: 1rem;
+
+      @include respond-to('large') {
+        margin-right: 0.5rem;
+      }
     }
   }
 
@@ -271,10 +377,18 @@
   &__alert {
     display: block;
     position: absolute;
-    top: 4.5rem;
+    top: 4.15rem;
     opacity: 0;
     padding: 1rem;
     z-index: 3;
     transition: opacity 1s;
+
+    @include respond-to('medium') {
+      top: 2.75rem;
+    }
+
+    @include respond-to('medium-landscape') {
+      top: 2.5rem;
+    }
   }
 }
