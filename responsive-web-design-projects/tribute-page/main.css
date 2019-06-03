@@ -91,7 +91,7 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  top: -100vh;
+  top: -150vh;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   width: 100%;
@@ -1010,8 +1010,6 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     height: 65vw;
     overflow: hidden; }
     @media screen and (min-width: 451px) and (orientation: landscape) {
@@ -1024,7 +1022,7 @@ header {
             -ms-flex-direction: column;
                 flex-direction: column;
         padding: 0.5vw;
-        height: unset;
+        height: 36rem;
         width: 29vw; } }
     @media screen and (min-width: 600px) and (orientation: portrait) {
       #books-and-movie .item {
@@ -1045,7 +1043,7 @@ header {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        height: unset;
+        height: 21rem;
         width: 29vw; } }
     #books-and-movie .item img {
       -webkit-box-flex: 0;
